@@ -6,4 +6,11 @@ $(document).ready(function() {
     $("p.person1").text(letter + "Sincerely yours, " + person1Input);
     event.preventDefault();//So it prevents reloading when submit is clicked
   });
+  $("#message").submit(function(){
+    var message1Input = $("input#message1").val();
+    var convertedMessage = message1Input.toUpperCase();
+    $('p.person1').text(convertedMessage);
+    event.preventDefault();//So it prevents reloading when submit is clicked
+
+  })
 });
